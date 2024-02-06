@@ -3,13 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xvolld Music</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
-    <title>Xvolld Music</title>
+    <style>
+        /* استایل‌های قبلی... */
+        /* استایل‌های جدید برای منوی همبرگر */
+        .menu-icon {
+            cursor: pointer;
+            display: none;
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            z-index: 1000;
+        }
+
+        .bar {
+            width: 30px;
+            height: 3px;
+            background-color: #52ffbd;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: #383838;
+            width: 70%;
+            height: 22%;
+            text-align: center;
+            z-index: 100;
+            overflow-x: hidden;
+            animation: slideDown 0.5s ease-in-out;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .mobile-menu li {
+            margin: 20px 0;
+        }
+
+        .mobile-menu a {
+            text-decoration: none;
+            color: #52ffbd;
+            font-size: 0.9em; /* کوچک‌تر کردن اندازه متن */
+            display: block;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .mobile-menu a:hover {
+            color: #77EFFF;
+        }
+
+        @media screen and (max-width: 768px) {
+            .menu-icon {
+                display: block;
+            }
+        }
+
+        /* انیمیشن اسلاید دانون */
+        @keyframes slideDown {
+            from {
+                top: -100%;
+            }
+            to {
+                top: 0;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- هدر و بخش‌های دیگر... -->
     <header>
         <h1>Xvolld Music</h1>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav class="mobile-menu">
+            <ul>
+                <li><a href="#" onclick="toggleMenu()">صفحه اصلی</a></li>
+                <li><a href="shop.html" onclick="toggleMenu()">سفارش بیت</a></li>
+            </ul>
+        </nav>
     </header>
     <section class="section">
         <h2>با لینک های زیر میتونید راحت عضو چنل ها بشین </h2>
