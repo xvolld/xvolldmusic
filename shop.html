@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xvolld shop</title>
+    <link rel="stylesheet" href="shopstyle.css">
+    <script defer src="shopscript.js"></script>
+<style>
+.menu-icon {
+            cursor: pointer;
+            display: none;
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            z-index: 1000;
+        }
+
+        .bar {
+            width: 30px;
+            height: 3px;
+            background-color: #df52ff;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: #383838;
+            width: 70%;
+            height: 22%;
+            text-align: center;
+            z-index: 100;
+            overflow-x: hidden;
+            animation: slideDown 0.5s ease-in-out;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .mobile-menu li {
+            margin: 20px 0;
+        }
+
+        .mobile-menu a {
+            text-decoration: none;
+            color: #ff7119;
+            font-size: 1.4em; /* کوچک‌تر کردن اندازه متن */
+            display: block;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .mobile-menu a:hover {
+            color: #77EFFF;
+        }
+
+        @media screen and (max-width: 768px) {
+            .menu-icon {
+                display: block;
+            }
+        }
+
+        /* انیمیشن اسلاید دانون */
+        @keyframes slideDown {
+            from {
+                top: -100%;
+            }
+            to {
+                top: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+  
+    <header>
+        <h1>xvolld shop</h1>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav class="mobile-menu">
+            <ul>
+                <li><a href="index.html" onclick="toggleMenu()">صفحه اصلی</a></li>
+                <li><a href="shop.html" onclick="toggleMenu()">سفارش بیت</a></li>
+            </ul>
+        </nav>
+    </header>
+  
+  
+   <article class="product">
+    <img src="trapb.png" alt="سفارش بیت ترپ">
+    <h2> سفارش بیت ترپ</h2>
+    <p> با لینک زیر میتونید بیت تو سبک های ترپ سفارش بدید</p>
+    <a href="https://zarinp.al/550708" class="add-to-cart-link">سفارش</a>
+</article>
+  
+  
+<article class="product">
+    <img src="drillb.png" alt="سفارش بیت دریل">
+    <h2>سفارش بیت دریل</h2>
+    <p>با لینک زیر میتونید بیت تو سبک های دریل سفارش بدید</p>
+    <a href="https://zarinp.al/569855" class="add-to-cart-link">سفارش</a>
+</article>
+    <!-- اضافه کردن محصولات بیشتر به همین شکل -->
+</section>
+        <!-- Add more products as needed -->
+    </section>
+    <footer>
+      <p>* این قسمت از وبسایت فعلا به صورت تستی میباشد و هنوز کامل نشده*</p>
+        <p>©Copyright by xvolld 2024</p>
+    </footer>
+</body>
+</html>
