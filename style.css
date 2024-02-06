@@ -100,3 +100,11 @@ header h1 {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   color: var(--text-color); /* تغییر رنگ متن به اکوا */
 }
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: #242424; /* اینجا رنگ مورد نظر خود را وارد کنید */
+    margin: 6px 0;
+    transition: 0.4s;
+}
